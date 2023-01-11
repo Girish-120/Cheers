@@ -1,0 +1,647 @@
+<header>
+  <nav class="navbar navbar-expand-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand logo" href="#"><img src="../../assets/Images/Logo.png" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <div style="background: #F5F5F5; border-radius: 22px; padding: 17px 0px;">
+              <span style="margin: 0px 13px; padding: 7px 9px;background: #FFF;border-radius: 20px;">delivery</span>
+              <span style="margin: 0px 13px; padding: 7px 9px">pick-up</span>
+              <span style="margin: 0px 13px; padding: 7px 9px">event</span>
+            </div>
+          </li>
+          <li class="nav-item" style="background: #F5F5F5; border-radius: 22px; padding: 17px 23px;">
+            <i class="fa fa-map-marker" aria-hidden="true" style="margin: 6px 10px;"></i>
+            <span>255, Ams..</span>
+          </li>
+          <li class="nav-item" style="margin-right: 100px;">
+            <i class="fa fa-search" aria-hidden="true" style="margin: 6px 10px; position: absolute;top: 24px;"></i>
+            <input type="text" placeholder="Beer, Wine, etc." style="background: #F5F5F5; border-radius: 22px; padding: 17px 30px; outline: none;border: none;">
+          </li>
+          <li class="nav-item" style="background: #FFCE00;border-radius: 20px;">
+            <a class="nav-link" href="#"><i style="color: #FFF;" class="fa fa-shopping-cart" aria-hidden="true"></i> <span style="padding-left: 23px;color: #FFF;">0</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link login_button" href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" onclick="openNav()"><i class="fa fa-bars" aria-hidden="true"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <hr style="margin: 0px 20%;">
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="sideBtn">
+      <a class="nav-link SignUpBtn" href="#">SignUp</a>
+      <a class="nav-link loginBtn" href="#">Login</a>
+    </div>
+    <a href="#" style=" font-size: 38px; font-weight: bold;">Plan a Celebration</a>
+    <a href="#" style=" font-size: 38px; font-weight: bold;">About Us</a>
+    <a href="#" style=" font-size: 38px; font-weight: bold;">FAQs</a>
+    <a href="#" style=" font-size: 38px; font-weight: bold;">Partners</a>
+
+    <a href="#" style=" font-size: 38px; font-weight: bold; margin-top: 90px;">Get the App</a>
+
+    <div class="sideNav_BTM">
+      <div class="sideNav_bottom"><img src="../../assets/Images/Logo.png" alt=""></div>
+      <div class="sideNav_apple"><img src="../../assets/Images/Apple Logo.png" alt=""><span style="font-size: 20px;">App
+          Store</span></div>
+      <div class="sideNav_android"><img src="../../assets/Images/Android OS.png" alt=""><span
+          style="font-size: 20px;">Playstore</span></div>
+
+    </div>
+  </div>
+</header>
+
+<!-- Main container -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-3" style="padding: 50px;">
+      <input type="checkbox" name="" id="openNav" onchange="openNavItem()">
+      <div id="mySidenavItem" class="sidenavItem">
+       <div class="row">
+        <div class="col-lg-6">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNavItem()">&times;</a>
+          <h5>Show bars and restaurants as the map is adjusted </h5>
+  
+          <div style="text-align: center; padding: 0px 66px;">
+            <h3>All Restaurants and Bars</h3>
+            <div style="display: flex; justify-content: space-between;">
+              <h5>Rose’s Carribean</h5>
+              <div>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star-half-o" aria-hidden="true"></i></span>
+              </div>
+            </div>
+            <div style="text-align: left;">
+              <span>Restaurant Description... “Authentic Carribean Food”</span><br>
+              <span style="color: #FFD31C;">Open until 6:30 PM</span>
+            </div>
+            <div >
+         </div>
+               <!-- Rose Carribean -->
+               
+               
+               
+        
+            </div>
+          </div>
+  
+          <div class="col-lg-6">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d454060.40230163233!2d75.89908927974155!3d27.239647787205392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bedf83b6c585%3A0x3e78d60be2fc9a85!2sIMG%20Global%20Infotech%20Private%20Limited!5e0!3m2!1sen!2sin!4v1673427468565!5m2!1sen!2sin" width="600" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+       </div>
+       
+      </div>
+
+
+        <h2 style="text-align: center;">Filters</h2>
+        <div style="padding: 0px 50px;" class="mt-5">
+          <h5>Sort Type</h5>
+          <input type="radio" name="radio" id=""> &nbsp;<span>For You</span><br>
+          <input type="radio" name="radio" id="">&nbsp; <span>Rating</span><br>
+          <input type="radio" name="radio" id="">&nbsp; <span>Top Categories</span>
+        </div>
+
+        <div style="padding: 0px 50px;" class="mt-5">
+          <h5>Alcohal Percentage </h5>
+          <input type="checkbox" name="checkbox" id="">&nbsp; <span>Less than 5%</span><br>
+          <input type="checkbox" name="checkbox" id=""> &nbsp;<span>5-15%</span><br>
+          <input type="checkbox" name="checkbox" id=""> &nbsp;<span>15-30%</span><br>
+          <input type="checkbox" name="checkbox" id=""> &nbsp;<span>Greater than 30%</span>
+        </div>
+
+        <div style="padding: 0px 50px;" class="mt-5">
+          <h5>Price </h5>
+          <span style="background: #D9D9D9;padding: 5px 12px;border-radius: 11px;border: 1px solid black; font-weight: bold;">$</span> &nbsp;&nbsp;
+          <span style="background: #D9D9D9;padding: 5px 12px;border-radius: 11px;border: 1px solid black; font-weight: bold;">$ $</span> &nbsp;&nbsp;
+          <span style="background: #D9D9D9;padding: 5px 9px;border-radius: 11px;border: 1px solid black; font-weight: bold;">$ $ $</span>
+        </div>
+
+        <div style="padding: 0px 50px;" class="mt-5">
+          <h5>Delivery Time </h5>
+          <input type="checkbox" name="checkbox" id=""> &nbsp;<span>5-10 minutes</span><br>
+          <input type="checkbox" name="checkbox" id=""> &nbsp;<span>10-20 minutes</span><br>
+          <input type="checkbox" name="checkbox" id=""> &nbsp;<span>20-30 minutes</span>
+        </div>
+
+        <div style="padding: 0px 50px;" class="mt-5">
+          <button style="background-color: #000000; color: #FFF; border-radius: 40px; padding: 6px 28px; ">Reset Filters</button>
+        </div>
+        
+
+    </div>
+    <div class="col-lg-9">
+      <!-- multi item-slider -->
+      <div class="row" style="width: 100%;">
+        <div class="MultiCarousel" data-items="1,2,3,4" data-slide="1" id="MultiCarousel" data-interval="3000">
+          <div class="MultiCarousel-inner">
+            <div class="item">
+              <div class="pad15">
+                <img src="../../assets/Images/alcoholic drinks images.png" alt="">
+                <p>Wine</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="pad15">
+                <img src="../../assets/Images/Mask group.png" alt="">
+                <p>Beer</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="pad15">
+                <img src="../../assets/Images/alcoholic drinks images (1).png" alt="">
+                <p>Liquor</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="pad15">
+                <img src="../../assets/Images/alcoholic drinks images.png" alt="">
+                <p>Mixers</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="pad15">
+                <img src="../../assets/Images/Mask group.png" alt="">
+                <p>RTDs</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="pad15">
+                <img src="../../assets/Images/alcoholic drinks images (1).png" alt="">
+                <p>Food</p>
+              </div>
+            </div>
+          </div>
+          <button class="btn leftLst"><</button>
+          <button class="btn rightLst">></button>
+        </div>
+      </div>
+
+      <!-- autoPlay Slider -->
+      
+      
+
+      <!-- Simple Slider -->
+      <div class="row">
+        <div class="MultiCarousel" data-items="1,2,3,4" data-slide="1" id="MultiCarousel" data-interval="3000" style="    width: 72vw;">
+          <div class="arrow_icon">
+            <div>
+              <p class="popular_drink">Popular Drinks</p>
+            </div>
+            <div class="slider_arrow">
+              <p class="see_all">See All</p>
+            </div>
+          </div>
+          <div class="MultiCarousel-inner">
+            <div class="item slider_details">
+              <div class="pad15 slider_item">
+                <div>
+                  <img src="../../assets/Images/img-1.png" alt="" style="height:100px; width:50px">
+                </div>
+                <div>
+                  <p>Corona Extra Beer</p>
+                  <span>375ml Can | 5%</span>
+                  <p style="font-size: 20px; color:#FFCC00">$ 2.98</p>
+                </div>
+              </div>
+            </div>
+            <div class="item slider_details">
+              <div class="pad15 slider_item">
+                <div>
+                  <img src="../../assets/Images/img-2.png" alt="" style="height:100px; width:50px">
+                </div>
+                <div>
+                  <p>Corona Extra Beer</p>
+                  <span>375ml Can | 5%</span>
+                  <p style="font-size: 20px; color:#FFCC00">$ 2.98</p>
+                </div>
+              </div>
+            </div>
+            <div class="item slider_details">
+              <div class="pad15 slider_item">
+                <div>
+                  <img src="../../assets/Images/img-3.png" alt="" style="height:100px; width:50px">
+                </div>
+                <div>
+                  <p>Corona Extra Beer</p>
+                  <span>375ml Can | 5%</span>
+                  <p style="font-size: 20px; color:#FFCC00">$ 2.98</p>
+                </div>
+              </div>
+            </div>
+            <div class="item slider_details">
+              <div class="pad15 slider_item">
+                <div>
+                  <img src="../../assets/Images/img-4.png" alt="" style="height:100px; width:50px">
+                </div>
+                <div>
+                  <p>Corona Extra Beer</p>
+                  <span>375ml Can | 5%</span>
+                  <p style="font-size: 20px; color:#FFCC00">$ 2.98</p>
+                </div>
+              </div>
+            </div>
+            <div class="item slider_details">
+              <div class="pad15 slider_item">
+                <div>
+                  <img src="../../assets/Images/img-5.png" alt="" style="height:100px; width:50px">
+                </div>
+                <div>
+                  <p>Corona Extra Beer</p>
+                  <span>375ml Can | 5%</span>
+                  <p style="font-size: 20px; color:#FFCC00">$ 2.98</p>
+                </div>
+              </div>
+            </div>
+            <div class="item slider_details">
+              <div class="pad15 slider_item">
+                <div>
+                  <img src="../../assets/Images/img-6.png" alt="" style="height:100px; width:50px">
+                </div>
+                <div>
+                  <p>Corona Extra Beer</p>
+                  <span>375ml Can | 5%</span>
+                  <p style="font-size: 20px; color:#FFCC00">$ 2.98</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="MultiCarousel-inner mt-3">
+            <div class="item slider_details">
+              <div class="pad15 slider_item">
+                <div>
+                  <img src="../../assets/Images/img-1.png" alt="" style="height:100px; width:50px">
+                </div>
+                <div>
+                  <p>Corona Extra Beer</p>
+                  <span>375ml Can | 5%</span>
+                  <p style="font-size: 20px; color:#FFCC00">$ 2.98</p>
+                </div>
+              </div>
+            </div>
+            <div class="item slider_details">
+              <div class="pad15 slider_item">
+                <div>
+                  <img src="../../assets/Images/img-2.png" alt="" style="height:100px; width:50px">
+                </div>
+                <div>
+                  <p>Corona Extra Beer</p>
+                  <span>375ml Can | 5%</span>
+                  <p style="font-size: 20px; color:#FFCC00">$ 2.98</p>
+                </div>
+              </div>
+            </div>
+            <div class="item slider_details">
+              <div class="pad15 slider_item">
+                <div>
+                  <img src="../../assets/Images/img-3.png" alt="" style="height:100px; width:50px">
+                </div>
+                <div>
+                  <p>Corona Extra Beer</p>
+                  <span>375ml Can | 5%</span>
+                  <p style="font-size: 20px; color:#FFCC00">$ 2.98</p>
+                </div>
+              </div>
+            </div>
+            <div class="item slider_details">
+              <div class="pad15 slider_item">
+                <div>
+                  <img src="../../assets/Images/img-4.png" alt="" style="height:100px; width:50px">
+                </div>
+                <div>
+                  <p>Corona Extra Beer</p>
+                  <span>375ml Can | 5%</span>
+                  <p style="font-size: 20px; color:#FFCC00">$ 2.98</p>
+                </div>
+              </div>
+            </div>
+            <div class="item slider_details">
+              <div class="pad15 slider_item">
+                <div>
+                  <img src="../../assets/Images/img-5.png" alt="" style="height:100px; width:50px">
+                </div>
+                <div>
+                  <p>Corona Extra Beer</p>
+                  <span>375ml Can | 5%</span>
+                  <p style="font-size: 20px; color:#FFCC00">$ 2.98</p>
+                </div>
+              </div>
+            </div>
+            <div class="item slider_details">
+              <div class="pad15 slider_item">
+                <div>
+                  <img src="../../assets/Images/img-6.png" alt="" style="height:100px; width:50px">
+                </div>
+                <div>
+                  <p>Corona Extra Beer</p>
+                  <span>375ml Can | 5%</span>
+                  <p style="font-size: 20px; color:#FFCC00">$ 2.98</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn leftLst" style="margin-top: -156px; margin-left: 968px;"><</button>
+          <button class="btn rightLst" style="margin-top: -156px;margin-right: 44px;">></button>
+          
+        </div>
+      </div>
+
+      <!-- Restaurant Slider -->
+      <div class="row">
+        <div class="MultiCarousel" data-items="1,2,3,4" data-slide="1" id="MultiCarousel" data-interval="3000" style="width:72vw">
+          <div class="arrow_icon">
+            <div>
+              <p class="popular_drink" style="position: absolute;">Restaurant</p>
+            </div>
+            <div class="slider_arrow">
+              <p class="see_all" style=" padding-top: 30px;">See All</p>
+            </div>
+          </div>
+          <div class="MultiCarousel-inner">
+            <div class="item">
+              <div class="pad15 ">
+                <div>
+                  <img style="width:-webkit-fill-available" src="../../assets/Images/restaurant-1.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="item ">
+              <div class="pad15 ">
+                <div>
+                  <img style="width:-webkit-fill-available" src="../../assets/Images/restaurant-2.png" alt="" >
+                </div>
+              </div>
+            </div>
+            <div class="item ">
+              <div class="pad15 ">
+                <div>
+                  <img style="width:-webkit-fill-available" src="../../assets/Images/restaurant-3.png" alt="" >
+                </div>
+              </div>
+            </div>
+            <div class="item ">
+              <div class="pad15 ">
+                <div>
+                  <img style="width:-webkit-fill-available" src="../../assets/Images/restaurant-1.png" alt="" >
+                </div>
+              </div>
+            </div>
+            <div class="item ">
+              <div class="pad15 ">
+                <div>
+                  <img style="width:-webkit-fill-available" src="../../assets/Images/restaurant-2.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="pad15 ">
+                <div>
+                  <img style="width:-webkit-fill-available" src="../../assets/Images/restaurant-3.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn leftLst" style="margin-top: -60px; margin-left: 968px;"><</button>
+          <button class="btn rightLst" style=" margin-top: -60px; margin-right: 44px;">></button>        
+        </div>
+      </div>
+
+      <!-- Party Fav -->
+      <div class="row">
+        <div class="MultiCarousel" data-items="1,2,3,4" data-slide="1" id="MultiCarousel" data-interval="3000" style="width: 72vw;">
+          <div class="arrow_icon">
+            <div>
+              <p class="popular_drink">Party Favourites</p>
+            </div>
+            <div class="slider_arrow">
+              <p class="see_all">See All</p>
+            </div>
+          </div>
+          <div class="MultiCarousel-inner">
+            <div class="item slider_details">
+              <div class="pad15 slider_item">
+                <div>
+                  <img src="../../assets/Images/img-1.png" alt="" style="height:100px; width:50px">
+                </div>
+                <div>
+                  <p>Corona Extra Beer</p>
+                  <span>375ml Can | 5%</span>
+                  <p style="font-size: 20px; color:#FFCC00">$ 2.98</p>
+                </div>
+              </div>
+            </div>
+            <div class="item slider_details">
+              <div class="pad15 slider_item">
+                <div>
+                  <img src="../../assets/Images/img-2.png" alt="" style="height:100px; width:50px">
+                </div>
+                <div>
+                  <p>Corona Extra Beer</p>
+                  <span>375ml Can | 5%</span>
+                  <p style="font-size: 20px; color:#FFCC00">$ 2.98</p>
+                </div>
+              </div>
+            </div>
+            <div class="item slider_details">
+              <div class="pad15 slider_item">
+                <div>
+                  <img src="../../assets/Images/img-3.png" alt="" style="height:100px; width:50px">
+                </div>
+                <div>
+                  <p>Corona Extra Beer</p>
+                  <span>375ml Can | 5%</span>
+                  <p style="font-size: 20px; color:#FFCC00">$ 2.98</p>
+                </div>
+              </div>
+            </div>
+            <div class="item slider_details">
+              <div class="pad15 slider_item">
+                <div>
+                  <img src="../../assets/Images/img-4.png" alt="" style="height:100px; width:50px">
+                </div>
+                <div>
+                  <p>Corona Extra Beer</p>
+                  <span>375ml Can | 5%</span>
+                  <p style="font-size: 20px; color:#FFCC00">$ 2.98</p>
+                </div>
+              </div>
+            </div>
+            <div class="item slider_details">
+              <div class="pad15 slider_item">
+                <div>
+                  <img src="../../assets/Images/img-5.png" alt="" style="height:100px; width:50px">
+                </div>
+                <div>
+                  <p>Corona Extra Beer</p>
+                  <span>375ml Can | 5%</span>
+                  <p style="font-size: 20px; color:#FFCC00">$ 2.98</p>
+                </div>
+              </div>
+            </div>
+            <div class="item slider_details">
+              <div class="pad15 slider_item">
+                <div>
+                  <img src="../../assets/Images/img-6.png" alt="" style="height:100px; width:50px">
+                </div>
+                <div>
+                  <p>Corona Extra Beer</p>
+                  <span>375ml Can | 5%</span>
+                  <p style="font-size: 20px; color:#FFCC00">$ 2.98</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn leftLst" style="margin-top: -70px; margin-left: 968px;"><</button>
+          <button class="btn rightLst" style=" margin-top: -70px; margin-right: 44px;">></button>
+          
+        </div>
+      </div>
+
+      <!-- Explore Liquor -->
+      <div class="row">
+        <div class="MultiCarousel" data-items="1,2,3,4" data-slide="1" id="MultiCarousel" data-interval="3000" style="width: 72vw;">
+          <div class="arrow_icon">
+            <div>
+              <p class="popular_drink">Explore Liquor</p>
+            </div>
+            <div class="slider_arrow">
+              <p class="see_all">See All</p>
+            </div>
+          </div>
+          <div class="MultiCarousel-inner">
+            <div class="item slider_details">
+              <div class="pad15 slider_item">
+                <div>
+                  <img src="../../assets/Images/img-1.png" alt="" style="height:100px; width:50px">
+                  <p>Corona Extra Beer</p>
+                </div>
+              </div>
+            </div>
+            <div class="item slider_details">
+              <div class="pad15 slider_item">
+                <div>
+                  <img src="../../assets/Images/img-2.png" alt="" style="height:100px; width:50px">
+                  <p>Corona Extra Beer</p>
+                </div>
+              </div>
+            </div>
+            <div class="item slider_details">
+              <div class="pad15 slider_item">
+                <div>
+                  <img src="../../assets/Images/img-3.png" alt="" style="height:100px; width:50px">
+                  <p>Corona Extra Beer</p>
+                </div>
+              </div>
+            </div>
+            <div class="item slider_details">
+              <div class="pad15 slider_item">
+                <div>
+                  <img src="../../assets/Images/img-4.png" alt="" style="height:100px; width:50px">
+                  <p>Corona Extra Beer</p>
+                </div>
+              </div>
+            </div>
+            <div class="item slider_details">
+              <div class="pad15 slider_item">
+                <div>
+                  <img src="../../assets/Images/img-5.png" alt="" style="height:100px; width:50px">
+                  <p>Corona Extra Beer</p>
+                </div>
+              </div>
+            </div>
+            <div class="item slider_details">
+              <div class="pad15 slider_item">
+                <div>
+                  <img src="../../assets/Images/img-6.png" alt="" style="height:100px; width:50px">
+                  <p>Corona Extra Beer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn leftLst" style="margin-top: -82px; margin-left: 968px;"><</button>
+          <button class="btn rightLst" style=" margin-top: -82px; margin-right: 44px;">></button>
+          
+        </div>
+      </div>
+
+      <!-- Rose Carribean -->
+      <div class="row">
+        <div class="MultiCarousel" data-items="1,2,3,4" data-slide="1" id="MultiCarousel" data-interval="3000">
+          <div class="arrow_icon">
+            <div>
+              <p class="popular_drink">From Rose’s Carribean</p>
+            </div>
+            <div class="slider_arrow">
+              <p class="see_all">View Menu</p>
+            </div>
+          </div>
+          <div class="MultiCarousel-inner">
+            <div class="item">
+              <div class="pad15 slider_item">
+                <div>
+                  <img src="../../assets/Images/img-1.png" alt="" style="height:100px; width:50px">
+                  <p>Corona Extra Beer</p>
+                </div>
+              </div>
+            </div>
+            <div class="item ">
+              <div class="pad15 slider_item">
+                <div>
+                  <img src="../../assets/Images/img-2.png" alt="" style="height:100px; width:50px">
+                  <p>Corona Extra Beer</p>
+                </div>
+              </div>
+            </div>
+            <div class="item ">
+              <div class="pad15 slider_item">
+                <div>
+                  <img src="../../assets/Images/img-3.png" alt="" style="height:100px; width:50px">
+                  <p>Corona Extra Beer</p>
+                </div>
+              </div>
+            </div>
+            <div class="item ">
+              <div class="pad15 slider_item">
+                <div>
+                  <img src="../../assets/Images/img-4.png" alt="" style="height:100px; width:50px">
+                  <p>Corona Extra Beer</p>
+                </div>
+              </div>
+            </div>
+            <div class="item ">
+              <div class="pad15 slider_item">
+                <div>
+                  <img src="../../assets/Images/img-5.png" alt="" style="height:100px; width:50px">
+                  <p>Corona Extra Beer</p>
+                </div>
+              </div>
+            </div>
+            <div class="item ">
+              <div class="pad15 slider_item">
+                <div>
+                  <img src="../../assets/Images/img-6.png" alt="" style="height:100px; width:50px">
+                  <p>Corona Extra Beer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn leftLst" style="margin-top: -85px; margin-left: 1007px;"><</button>
+          <button class="btn rightLst" style=" margin-top: -85px; margin-right: 44px;">></button>
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+.MultiCarousel {
+	float: left;
+	overflow: hidden;
+	padding: 15px;
+	width: 100%;
+	position: relative;
+}
+.MultiCarousel .MultiCarousel-inner {
+	transition: 1s ease all;
+	float: left;
+}
+.MultiCarousel .MultiCarousel-inner .item {
+	float: left;
+}
+.MultiCarousel .MultiCarousel-inner .item > div {
+	text-align: center;
+	padding: 10px;
+	margin: 10px;
+	color: #666;
+}
+.rightLst{
+    background: black;
+    color: #FFF;
+}
+.leftLst{
+    background: black;
+    color: #FFF;
+}
+.MultiCarousel .leftLst,
+.MultiCarousel .rightLst {
+	position: absolute;
+	border-radius: 50%;
+	top: calc(50% - 20px);
+}
+
+.MultiCarousel .leftLst {
+	left: 0;
+}
+.MultiCarousel .rightLst, .right_arrow {
+	right: 0;
+}
+
+.MultiCarousel .leftLst.over,
+.MultiCarousel .rightLst.over {
+	pointer-events: none;
+	background: #ccc;
+}
+.pad15 p{
+    color: #000000;
+    font-weight: bold;
+}

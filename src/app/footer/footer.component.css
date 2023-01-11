@@ -1,0 +1,19 @@
+.sideNav_apple {
+    height: 50px;
+    width: 150px;
+    border-radius: 25px;
+    background: #F5F5F5;
+    padding: 7px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.sideNav_android {
+    height: 50px;
+    width: 150px;
+    border-radius: 25px;
+    background: #F5F5F5;
+    padding: 7px;
+    display: flex;
+    justify-content: flex-start;
+}
