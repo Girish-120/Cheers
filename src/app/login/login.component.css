@@ -1,0 +1,61 @@
+.emailheading {
+    position: absolute;
+    width: 909px;
+    height: 61px;
+    left: 410px;
+    top: 224px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 61px;
+    color: #F5AD11;
+}
+
+input {
+    position: absolute;
+    width: 648px;
+    height: 53px;
+    left: 423px;
+    top: 324px;
+    border-radius: 8px;
+}
+
+.enterEmail {
+    position: absolute;
+    width: 637px;
+    height: 172px;
+    left: 422px;
+    top: 411px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 48px;
+}
+
+.enterPass{
+    position: absolute;
+    width: 637px;
+    height: 172px;
+    left: 422px;
+    top: 234px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 48px;
+}
+.passHeading{
+    position: absolute;
+    width: 909px;
+    height: 61px;
+    left: 410px;
+    top: 175px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 61px;
+    color: #F5AD11;
+}

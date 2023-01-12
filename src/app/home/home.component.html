@@ -1,20 +1,20 @@
 <header>
   <nav class="navbar navbar-expand-sm">
     <div class="container-fluid">
-      <a class="navbar-brand logo" href="#"><img src="../../assets/Images/Logo.png" alt=""></a>
+      <a class="navbar-brand logo" routerLink="/"><img src="../../assets/Images/Logo.png" alt=""></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="#">Celebrate</a>
+            <a class="nav-link" routerLink="/main">Celebrate</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Sign Up</a>
+            <a class="nav-link" routerLink="/signup">Sign Up</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link login_button" href="#">Login</a>
+            <a class="nav-link login_button" routerLink="/login">Login</a>
           </li>
           <li class="nav-item ms-2">
             <a class="nav-link" style="cursor: pointer;" onclick="openNav()"><i class="fa fa-bars" aria-hidden="true"></i></a>
@@ -27,13 +27,13 @@
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <div class="sideBtn">
-      <a class="nav-link SignUpBtn" href="#">SignUp</a>
-      <a class="nav-link loginBtn" href="#">Login</a>
+      <a class="nav-link SignUpBtn" routerLink="/signup">SignUp</a>
+      <a class="nav-link loginBtn" routerLink="/login">Login</a>
     </div>
-    <a href="#" style=" font-size: 38px; font-weight: bold;">Plan a Celebration</a>
-    <a href="#" style=" font-size: 38px; font-weight: bold;">About Us</a>
-    <a href="#" style=" font-size: 38px; font-weight: bold;">FAQs</a>
-    <a href="#" style=" font-size: 38px; font-weight: bold;">Partners</a>
+    <a routerLink="/main" style=" font-size: 38px; font-weight: bold;">Plan a Celebration</a>
+    <a routerLink="/about" style=" font-size: 38px; font-weight: bold;">About Us</a>
+    <a routerLink="/faq" style=" font-size: 38px; font-weight: bold;">FAQs</a>
+    <a routerLink="/partners" style=" font-size: 38px; font-weight: bold;">Partners</a>
 
     <a href="#" style=" font-size: 38px; font-weight: bold; margin-top: 90px;">Get the App</a>
 
@@ -588,3 +588,4 @@
   </div>
 </div>
 
+<app-footer></app-footer>

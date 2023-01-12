@@ -1,3 +1,4 @@
+
 .logo img {
     height: 55px;
     width: 130px;
@@ -32,12 +33,12 @@
 .login_button {
     background-color: black;
     color: white !important;
-    border-radius: 20px;
-    width: 70px;
+    border-radius: 10px;
+    width: 191px;
     align-items: center;
     display: flex;
     justify-content: center;
-    font-size: 15px;
+    font-size: 22px;
 }
 
 #collapsibleNavbar ul li a i {
@@ -162,41 +163,87 @@
     justify-content: flex-start;
 }
 
-.see_all{
-    padding-right: 67px !important;
+
+
+
+.MultiCarousel {
+    float: left;
+    overflow: hidden;
+    padding: 15px;
+    width: 100%;
+    position: relative;
 }
 
-/* slider */
-
-.sidenavItem {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 84px;
-    left: 296px;
-    background-color: #FFFF;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-.sidenavItem a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: black;
-    display: block;
-    transition: 0.3s;
+.MultiCarousel .MultiCarousel-inner {
+    transition: 1s ease all;
+    float: left;
 }
 
-.sidenavItem a:hover {
-    color: #f1f1f1;
+.MultiCarousel .MultiCarousel-inner .item {
+    float: left;
 }
 
-.sidenavItem .closebtn {
+.MultiCarousel .MultiCarousel-inner .item>div {
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    color: #666;
+}
+
+.rightLst {
+    background: black;
+    color: #FFF;
+}
+
+.leftLst {
+    background: black;
+    color: #FFF;
+}
+
+.MultiCarousel .leftLst,
+.MultiCarousel .rightLst {
     position: absolute;
-    top: 0;
-    right: 70px;
-    font-size: 36px;
-    margin-left: -30px;
+    border-radius: 50%;
+    top: calc(50% - 20px);
 }
+
+.MultiCarousel .leftLst {
+    left: 0;
+}
+
+.MultiCarousel .rightLst {
+    right: 0;
+}
+
+.MultiCarousel .leftLst.over,
+.MultiCarousel .rightLst.over {
+    pointer-events: none;
+    background: #ccc;
+}
+
+.pad15 p {
+    color: #000000;
+    font-weight: bold;
+}
+
+.div_line {
+    width: 651px;
+    height: 0px;
+    left: 0px;
+    top: 3096px;
+    border: 1px solid #000000;
+    margin-top: 69px;
+}
+
+.div_line2 {
+    width: 655px;
+    height: 0px;
+    left: 1043px;
+    top: 3096px;
+    border: 1px solid #000000;
+    margin-top: 69px;
+}
+
+
+/* 
+slider */

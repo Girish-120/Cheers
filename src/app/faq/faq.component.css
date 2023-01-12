@@ -32,12 +32,12 @@
 .login_button {
     background-color: black;
     color: white !important;
-    border-radius: 20px;
-    width: 70px;
+    border-radius: 10px;
+    width: 191px;
     align-items: center;
     display: flex;
     justify-content: center;
-    font-size: 15px;
+    font-size: 22px;
 }
 
 #collapsibleNavbar ul li a i {
@@ -162,41 +162,17 @@
     justify-content: flex-start;
 }
 
-.see_all{
-    padding-right: 67px !important;
+button {
+    font-size: 27px;
+    font-weight: 700;
 }
 
-/* slider */
-
-.sidenavItem {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 84px;
-    left: 296px;
-    background-color: #FFFF;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-.sidenavItem a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: black;
-    display: block;
-    transition: 0.3s;
+::ng-deep .accordion-button::after {
+    background-image: url(../../assets/Images/+.png) !important;
 }
 
-.sidenavItem a:hover {
-    color: #f1f1f1;
-}
-
-.sidenavItem .closebtn {
-    position: absolute;
-    top: 0;
-    right: 70px;
-    font-size: 36px;
-    margin-left: -30px;
+.accordion-button .active ::after {
+    content: '-';
+    font-size: 30px;
+    transition: .5s;
 }

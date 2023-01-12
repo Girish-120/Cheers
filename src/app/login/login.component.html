@@ -1,0 +1,30 @@
+<div class="container pt-2">
+  <div class="row">
+    <img routerLink="/" src="../../assets/Images/Logo.png" alt="" style="height: 113px; width: 200px; cursor: pointer;">
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <!-- Enter Mobile/Email -->
+  <form [formGroup]="loginForm" (ngSubmit)="loginFormSubmit()">
+  <div id="loginScreen">
+      <h2 class="emailheading">What is your phone number or email?</h2>
+      <input formControlName="username" type="text" style="padding-left: 53px;font-size: 30px;" placeholder="Enter your phone Number or Email">
+      <i (click)="changeScreen()" style="position: relative;left: 1003px;bottom: -214px;font-size: 40px;" class="fa fa-arrow-right" aria-hidden="true"></i>
+      <h3 class="enterEmail">By proceeding, you consent to get calls or messages from Cheers.</h3>
+  </div>
+
+  <!-- Enter Password -->
+  <div id="loginpassScreen">
+    <h2 class="passHeading">Welcome back, Name</h2>
+    <h3 class="enterPass">Please enter your password to continue</h3>
+      <input formControlName="password" type="password" style="padding-left: 53px;font-size: 30px;" placeholder="Enter your password">
+      <i style=" position: relative;
+      left: 1002px;
+      bottom: -218px;
+      font-size: 34px;" class="fa fa-eye-slash" aria-hidden="true"></i>
+      <button type="submit" style="background: #000;color: #FFF;font-size: 25px;border-radius: 20px; font-family: Inter;">next <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+  </div>
+  </form>
+</div>

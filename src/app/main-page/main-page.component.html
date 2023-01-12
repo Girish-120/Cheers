@@ -1,7 +1,7 @@
 <header>
   <nav class="navbar navbar-expand-sm">
     <div class="container-fluid">
-      <a class="navbar-brand logo" href="#"><img src="../../assets/Images/Logo.png" alt=""></a>
+      <a class="navbar-brand logo" routerLinnk="/"><img src="../../assets/Images/Logo.png" alt=""></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -40,8 +40,8 @@
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <div class="sideBtn">
-      <a class="nav-link SignUpBtn" href="#">SignUp</a>
-      <a class="nav-link loginBtn" href="#">Login</a>
+      <a class="nav-link SignUpBtn" routerLink="/signup">SignUp</a>
+      <a class="nav-link loginBtn" routerLink="/login">Login</a>
     </div>
     <a href="#" style=" font-size: 38px; font-weight: bold;">Plan a Celebration</a>
     <a href="#" style=" font-size: 38px; font-weight: bold;">About Us</a>
@@ -645,3 +645,7 @@
     </div>
   </div>
 </div>
+
+
+<!-- Footer -->
+<app-footer></app-footer>
