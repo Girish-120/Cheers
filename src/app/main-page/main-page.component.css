@@ -200,3 +200,36 @@
     font-size: 36px;
     margin-left: -30px;
 }
+
+.roseCarribean{
+    padding-right: 92px !important;
+}
+
+
+/* Switch Toggle */
+.switch-toggle {
+    float: left;
+    background: #F5F5F5;
+    border-radius: 22px; 
+    padding: 10px 0px;
+ }
+ .switch-toggle input {
+   position: absolute;
+   opacity: 0;
+ }
+ .switch-toggle input + label {
+   padding: 15px;
+   float:left;
+   color: #000000;
+   font-weight: 700;
+   cursor: pointer;
+ }
+ .switch-toggle input:checked + label {
+    background: #FFF;
+    border-radius: 21px;
+    color: #000000;
+    padding: 15px;
+    font-weight: 700;
+ }
+
+

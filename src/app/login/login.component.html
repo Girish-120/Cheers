@@ -10,7 +10,7 @@
   <form [formGroup]="loginForm" (ngSubmit)="loginFormSubmit()">
   <div id="loginScreen">
       <h2 class="emailheading">What is your phone number or email?</h2>
-      <input formControlName="username" type="text" style="padding-left: 53px;font-size: 30px;" placeholder="Enter your phone Number or Email">
+      <input class="emailInput" formControlName="username" type="text" style="padding-left: 53px;font-size: 30px;" placeholder="Enter your phone Number or Email">
       <i (click)="changeScreen()" style="position: relative;left: 1003px;bottom: -214px;font-size: 40px;" class="fa fa-arrow-right" aria-hidden="true"></i>
       <h3 class="enterEmail">By proceeding, you consent to get calls or messages from Cheers.</h3>
   </div>
@@ -19,12 +19,74 @@
   <div id="loginpassScreen">
     <h2 class="passHeading">Welcome back, Name</h2>
     <h3 class="enterPass">Please enter your password to continue</h3>
-      <input formControlName="password" type="password" style="padding-left: 53px;font-size: 30px;" placeholder="Enter your password">
-      <i style=" position: relative;
-      left: 1002px;
-      bottom: -218px;
-      font-size: 34px;" class="fa fa-eye-slash" aria-hidden="true"></i>
-      <button type="submit" style="background: #000;color: #FFF;font-size: 25px;border-radius: 20px; font-family: Inter;">next <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+       <input class="passInput" formControlName="password" [type]="show_button ? 'text' : 'password'"  style="padding-left:32px;font-size: 30px;" placeholder="Enter your password">
+      <i style=" font-size: 34px; position: relative;left: 991px;bottom: -208px;" (click)="showPassword()" [class]="show_eye ? 'fa fa-eye' : 'fa fa-eye-slash'" aria-hidden="true"></i>
+
+      <div style="position: relative;top: 231px; padding: 0px 0px 0px 870px; font-size: 20px;font-weight: 500;color: red; cursor: pointer;"><a data-bs-toggle="modal" data-bs-target="#exampleModal">Forgot Password ?</a></div>
+
+
+
+     <button type="submit" style="background: #000;color: #FFF;font-size: 25px;border-radius: 20px; font-family: Inter;     position: relative; left: 629px; top: 260px; width: 10%;">next <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
   </div>
   </form>
+
+  <!-- Popup -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="row">
+           <div class="col-lg-12" style="text-align: center;">
+            <h3>Forgot PassWord</h3>
+            <hr>
+           </div>
+
+           <!-- Email -->
+              <div class="row mt-3" id="emailFor">
+                <form [formGroup]="emailForgotForm" (ngSubmit)="emailForgotSubmit()">
+                <div class="col-md-12">
+                  <label for="emailForg" style="font-size: 20px;font-weight: 500;">Enter Email</label>
+                  <input type="email" formControlName="email" placeholder="Email" name="forgotEmail" style="width: 100%;border-radius: 10px; padding: 7px;">
+  
+                  <button class="mt-3" type="submit" style="background: #000;color: #FFF;font-size: 25px;border-radius: 20px; font-family: Inter; width: 50%; margin-left: 112px;">next <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                </div>
+              </form>
+              </div>
+
+            <!-- OTP Match -->
+             <div class="row mt-3" id="OtpFor">
+               <form [formGroup]="otpMatchForm" (ngSubmit)="otpMatchSubmit()">
+                <label for="verifyOTP" style="font-size: 20px;padding-left: 53px;">Verify OTP</label>
+                  <div class="col-md-12" style="text-align: center;">
+                    <input type="tel" name="pass1" maxlength="1" size="1" required id="pass1" style="font-weight: 600; font-size: 21px; padding: 20px 22px 21px; height: 60px;width: 60px;">
+                     &nbsp;
+                    <input type="tel" name="pass2" maxlength="1" size="1" required id="pass2" style="font-weight: 600; font-size: 21px; padding: 20px 22px 21px; height: 60px;width: 60px;">
+                     &nbsp;
+                    <input type="tel" name="pass3" maxlength="1" size="1" required id="pass3" style="font-weight: 600; font-size: 21px; padding: 20px 22px 21px; height: 60px;width: 60px;">
+                     &nbsp;
+                    <input type="tel" name="pass4" maxlength="1" size="1" required id="pass4" style="font-weight: 600; font-size: 21px; padding: 20px 22px 21px; height: 60px;width: 60px;">
+                     &nbsp;
+                    <input type="tel" name="pass5" maxlength="1" size="1" required id="pass5" style="font-weight: 600; font-size: 21px; padding: 20px 22px 21px; height: 60px;width: 60px;">
+                  </div>
+                <button class="mt-3" type="submit" style="background: #000;color: #FFF;font-size: 25px;border-radius: 20px; font-family: Inter; width: 50%; margin-left: 112px;">next <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+               </form>
+            </div>
+            
+            <!-- Enter New Password -->
+            <div class="row mt-3" id="newPassFor">
+              <form [formGroup]="resetPassForm" (ngSubmit)="resetPassSumbit()">
+                <div class="col-md-12">
+                  <label for="passForg" style="font-size: 20px;font-weight: 500;">Enter New Password</label>
+                  <input type="password" formControlName="password" placeholder="Enter New PassWord" style="width: 100%;border-radius: 10px; padding: 7px;">
+  
+                  <button class="mt-3" type="submit" style="background: #000;color: #FFF;font-size: 25px;border-radius: 20px; font-family: Inter; width: 50%; margin-left: 112px;">Submit</button>
+                </div>
+              </form>
+            </div>
+
+          </div>
+          
+      </div>
+    </div>
+  </div>
 </div>

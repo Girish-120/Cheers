@@ -1,0 +1,46 @@
+/* gallery */
+ .gallery-title
+{
+    font-size: 36px;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 70px;
+}
+.gallery-title:after {
+    content: "";
+    position: absolute;
+    width: 7.5%;
+    left: 46.5%;
+    height: 45px;
+    border-bottom: 1px solid #5e5e5e;
+}
+.filter-button
+{
+    font-size: 25px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+.filter-button:hover
+{
+    font-size: 25px;
+    text-align: center;
+    color: #000000;
+    font-weight: 700;
+
+}
+.port-image
+{
+    width: 100%;
+}
+
+.gallery_product
+{
+    margin-bottom: 30px;
+}
+
+li.active
+{
+    border-bottom: 5px solid #000000;
+}

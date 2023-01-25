@@ -4,6 +4,7 @@ function openNav() {
   
   function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("mySidenavAfter").style.width = "0";
   }
 
   function openNavItem() {
@@ -13,4 +14,8 @@ function openNav() {
   
   function closeNavItem() {
     document.getElementById("mySidenavItem").style.width = "0";
+  }
+
+  function openNavAfter(){
+    document.getElementById("mySidenavAfter").style.width = "600px";
   }

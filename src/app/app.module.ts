@@ -12,11 +12,16 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { FaqComponent } from './faq/faq.component';
 import { PartnersComponent } from './partners/partners.component';
 import { LoginComponent } from './login/login.component';
-import { VerificationComponent } from './verification/verification.component';
 import { HttpClientModule } from '@angular/common/http'; 
 import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from "ngx-toastr";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { AccountComponent } from './account/account.component';
+import { RestaurantsComponent } from './restaurants/restaurants.component';
+import { FavouritesComponent } from './favourites/favourites.component';
+import { OrderHistoryComponent } from './order-history/order-history.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { Page404Component } from './page404/page404.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +35,12 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     FaqComponent,
     PartnersComponent,
     LoginComponent,
-    VerificationComponent
+    AccountComponent,
+    RestaurantsComponent,
+    FavouritesComponent,
+    OrderHistoryComponent,
+    CheckoutComponent,
+    Page404Component
   ],
   imports: [
     BrowserModule,

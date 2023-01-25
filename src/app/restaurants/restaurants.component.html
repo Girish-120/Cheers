@@ -1,0 +1,1527 @@
+<app-header></app-header>
+
+<!-- Main container -->
+<div class="container-fluid" >
+  <div class="row" id="mainDiv">
+    <div class="col-lg-3" style="padding: 50px;">
+        <h2 style="text-align: center;">Filters</h2>
+        <div style="padding: 0px 50px;" class="mt-5">
+          <h5>Sort Type</h5>
+          <input type="radio" name="radio" id=""> &nbsp;<span>For You</span><br>
+          <input type="radio" name="radio" id="">&nbsp; <span>Rating</span><br>
+          <input type="radio" name="radio" id="">&nbsp; <span>Top Categories</span>
+        </div>
+
+        <div style="padding: 0px 50px;" class="mt-5">
+          <h5>Alcohal Percentage </h5>
+          <input type="checkbox" name="checkbox" id="">&nbsp; <span>Less than 5%</span><br>
+          <input type="checkbox" name="checkbox" id=""> &nbsp;<span>5-15%</span><br>
+          <input type="checkbox" name="checkbox" id=""> &nbsp;<span>15-30%</span><br>
+          <input type="checkbox" name="checkbox" id=""> &nbsp;<span>Greater than 30%</span>
+        </div>
+
+        <div style="padding: 0px 50px;" class="mt-5">
+          <h5>Price </h5>
+          <span style="background: #D9D9D9;padding: 5px 12px;border-radius: 11px;border: 1px solid black; font-weight: bold;">$</span> &nbsp;&nbsp;
+          <span style="background: #D9D9D9;padding: 5px 12px;border-radius: 11px;border: 1px solid black; font-weight: bold;">$ $</span> &nbsp;&nbsp;
+          <span style="background: #D9D9D9;padding: 5px 9px;border-radius: 11px;border: 1px solid black; font-weight: bold;">$ $ $</span>
+        </div>
+
+        <div style="padding: 0px 50px;" class="mt-5">
+          <h5>Delivery Time </h5>
+          <input type="checkbox" name="checkbox" id=""> &nbsp;<span>5-10 minutes</span><br>
+          <input type="checkbox" name="checkbox" id=""> &nbsp;<span>10-20 minutes</span><br>
+          <input type="checkbox" name="checkbox" id=""> &nbsp;<span>20-30 minutes</span>
+        </div>
+
+        <div style="padding: 0px 50px;" class="mt-5">
+          <button style="background-color: #000000; color: #FFF; border-radius: 40px; padding: 6px 28px; ">Reset Filters</button>
+        </div>
+        
+
+    </div>
+
+    <div class="col-lg-9 pt-3 pb-3" id="mainDiv">
+      <div class="row">
+        <div class="col-lg-12" style="text-align: center;">
+          <h2>All Restaurant</h2>
+        </div>
+      </div>
+      <div class="row pt-3">
+        <div class="col-lg-2">
+          <div style="background: #FFFFFF; box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25); border-radius: 10px; text-align: center;">
+            <h5>Chicken Lady’s Coop</h5>
+            <img src="../../assets/Images/chickenladylogo02.png" alt="">
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div style="background: #FFFFFF; box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25); border-radius: 10px; text-align: center;">
+            <h5>Outskirts Sports Bar & Grill</h5>
+            <img src="../../assets/Images/outskirts logo.png" alt="">
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div style="background: #FFFFFF; box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25); border-radius: 10px; text-align: center;">
+            <h5>Rose’s Caribbean Restaurant</h5>
+            <img src="../../assets/Images/rose logo.png" alt="">
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div style="background: #FFFFFF; box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25); border-radius: 10px; text-align: center;">
+            <h5 style="line-height: 2.3;">Thai Orchid</h5>
+            <img src="../../assets/Images/thai orchid logo.png" alt="">
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div style="background: #FFFFFF; box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25); border-radius: 10px; text-align: center;">
+            <h5>Tuesday’s Street Tacos</h5>
+            <img src="../../assets/Images/tuesday tacos logo.png" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-lg-6">
+          <div class="row" style="cursor: pointer;" (click)="restDetails()">
+            <div class="col-lg-6">
+              <h5>Rose’s Carribean</h5>
+            </div>
+            <div class="col-lg-6">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-half-o" aria-hidden="true"></i>
+            </div>
+          </div>
+
+          <div class="row">
+            <p>Restaurant Description... “Authentic Carribean Food”</p>
+          </div>
+          <div class="row">
+            <p style="color: #FFD31C;">Open until 6:30 PM</p>
+          </div>
+
+          <div class="row">
+              <!-- multi item-slider -->
+              <div class="row" style="width: 100%;">
+                <div class="MultiCarousel" data-items="1,2,3,4" data-slide="1" id="MultiCarousel" data-interval="3000">
+                  <div class="MultiCarousel-inner">
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <button class="btn leftLst"><</button>
+                  <button class="btn rightLst">></button>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="row">
+            <div class="col-lg-6">
+              <h5>Thai Orchid</h5>
+            </div>
+            <div class="col-lg-6">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+            </div>
+          </div>
+
+          <div class="row">
+            <p>Restaurant description... The best thai food in Colombus</p>
+          </div>
+          <div class="row">
+            <p style="color: #FFD31C;">Open until 8:00 PM</p>
+          </div>
+
+          <div class="row">
+              <!-- multi item-slider -->
+              <div class="row" style="width: 100%;">
+                <div class="MultiCarousel" data-items="1,2,3,4" data-slide="1" id="MultiCarousel" data-interval="3000">
+                  <div class="MultiCarousel-inner">
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <button class="btn leftLst"><</button>
+                  <button class="btn rightLst">></button>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-lg-12">
+          <div class="row"><h2>Daily Specials</h2></div>
+
+          <div class="row">
+            <div class="col-lg-12">
+              <!-- multi item-slider -->
+              <div class="row" style="width: 100%;padding: 0px 30px;">
+                <div class="MultiCarousel" data-items="1,2,3,4" data-slide="1" id="MultiCarousel" data-interval="3000">
+                  <div class="MultiCarousel-inner">
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <button class="btn leftLst"><</button>
+                  <button class="btn rightLst">></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="row mb-2"><h2>Explore Chicken</h2></div>
+        <div class="col-lg-6">
+          <div class="row">
+            <div class="col-lg-6">
+              <h5>Rose’s Carribean</h5>
+            </div>
+            <div class="col-lg-6">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-half-o" aria-hidden="true"></i>
+            </div>
+          </div>
+
+          <div class="row">
+            <p>Restaurant Description... “Authentic Carribean Food”</p>
+          </div>
+          <div class="row">
+            <p style="color: #FFD31C;">Open until 6:30 PM</p>
+          </div>
+
+          <div class="row">
+              <!-- multi item-slider -->
+              <div class="row" style="width: 100%;">
+                <div class="MultiCarousel" data-items="1,2,3,4" data-slide="1" id="MultiCarousel" data-interval="3000">
+                  <div class="MultiCarousel-inner">
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <button class="btn leftLst"><</button>
+                  <button class="btn rightLst">></button>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="row">
+            <div class="col-lg-6">
+              <h5>Thai Orchid</h5>
+            </div>
+            <div class="col-lg-6">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+            </div>
+          </div>
+
+          <div class="row">
+            <p>Restaurant description... The best thai food in Colombus</p>
+          </div>
+          <div class="row">
+            <p style="color: #FFD31C;">Open until 8:00 PM</p>
+          </div>
+
+          <div class="row">
+              <!-- multi item-slider -->
+              <div class="row" style="width: 100%;">
+                <div class="MultiCarousel" data-items="1,2,3,4" data-slide="1" id="MultiCarousel" data-interval="3000">
+                  <div class="MultiCarousel-inner">
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <button class="btn leftLst"><</button>
+                  <button class="btn rightLst">></button>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-lg-12">
+          <div class="row"><h2>Based on your previous order</h2></div>
+
+          <div class="row">
+            <div class="col-lg-12">
+              <!-- multi item-slider -->
+              <div class="row" style="width: 100%;padding: 0px 30px;">
+                <div class="MultiCarousel" data-items="1,2,3,4" data-slide="1" id="MultiCarousel" data-interval="3000">
+                  <div class="MultiCarousel-inner">
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pad15">
+                        <div style="padding: 20px 0px;"><img src="../../assets/Images/vegie-fried.png" alt="" style="width: 100%;"></div>
+                        <div class="pt-2" style="font-size: 13px;" >
+                          <p>Veggie Fried Rice</p>
+                          <p>$3.50 · 1 Bowl</p>
+                          <span>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <button class="btn leftLst"><</button>
+                  <button class="btn rightLst">></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="row"><h2>Deals</h2></div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="../../assets/Images/Chicken Lady Group.png" alt="">
+          </div>
+          <div class="col-lg-6">
+            <img src="../../assets/Images/Tuesday's Tacos Coupon.png" alt="">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Restaurants -->
+  <div class="row" style="padding: 10px 25px;" id="details_screen">
+    <div class="col-lg-8 pt-3">
+      <div class="row">
+        <img src="../../assets/Images/rose_carribean.png" alt="">
+        <div style="position: relative;top: -60px;left: 40px; border-radius:100px; border: 1px solid black; width: 14%;background: #FFF">
+          <img src="../../assets/Images/rose logo_1.png" alt=""></div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6">
+              <h2>Rose’s Caribbean Restaurant</h2>
+              <h5>The restaurant’s Location · 2 mi away</h5>
+              <p style="color: #FFCE00;">Open until 6:30 PM</p>
+            </div>
+            <div class="col-lg-6">
+              <span>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              </span>
+              <p>350 Reviews</p>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-lg-12">Description of the restaurant and what it provides...Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <b>(2-3 sentences max)</b></div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-lg-12">
+              <i class="fa fa-search" aria-hidden="true" style="position: relative; left: 24px; top: -1px;"></i>
+              <input type="text" placeholder="search menu" style="background: #F5F5F5; border-radius: 30px; font-size: 20px; padding-left: 30px;">
+            </div>
+          </div>
+
+          <div class="row mt-5">
+            <div class="col-lg-12">
+              <div class="row" id="buttonList">
+                <ul >
+                    <li class="btn btn-default filter-button" data-filter="all">All</li>
+                    <li class="btn btn-default filter-button" data-filter="daliySpc">Daily Specials</li>
+                    <li class="btn btn-default filter-button" data-filter="lunch">Lunch</li>
+                    <li class="btn btn-default filter-button" data-filter="drinks">Drinks</li>
+                    <li class="btn btn-default filter-button" data-filter="dinner">Dinner</li>
+                    <li class="btn btn-default filter-button" data-filter="sides">Sides</li>
+                    <li class="btn btn-default filter-button" data-filter="kidsmenu">Kids Menu</li>
+                </ul>
+                <br>
+
+                <!-- daily special -->
+                <div class="row mt-2 filter daliySpc">
+                  <div class="row">
+                    <div style="display: flex; ">
+                      <h3>Daily Specials</h3>
+                      <p style="margin-left: 10%; padding: 5px 10px; background: #FFCE00;border-radius: 20px;">Monday <span><i class="fa fa-angle-down" aria-hidden="true"></i></span></p>
+                    </div>
+                  </div>
+
+                  <div data-bs-toggle="modal" data-bs-target="#exampleModal" class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 " style="border: 1px solid #C4C4C4;
+                  border-radius: 10px; text-align: center;">
+                    <img src="../../assets/Images/vegie-fried.png" class="img-responsive" style="width: 90%;">
+
+                    <h5>Veggie Fried Rice</h5>
+                    <p>$3.50 · 1 Bowl</p>
+                    <span>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                  <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 " style="border: 1px solid #C4C4C4;
+                  border-radius: 10px; text-align: center;">
+                    <img src="../../assets/Images/vegie-fried.png" class="img-responsive" style="width: 90%;">
+
+                    <h5>Veggie Fried Rice</h5>
+                    <p>$3.50 · 1 Bowl</p>
+                    <span>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                  <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 " style="border: 1px solid #C4C4C4;
+                  border-radius: 10px; text-align: center;">
+                    <img src="../../assets/Images/vegie-fried.png" class="img-responsive" style="width: 90%;">
+
+                    <h5>Veggie Fried Rice</h5>
+                    <p>$3.50 · 1 Bowl</p>
+                    <span>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                  <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 " style="border: 1px solid #C4C4C4;
+                  border-radius: 10px; text-align: center;">
+                    <img src="../../assets/Images/vegie-fried.png" class="img-responsive" style="width: 90%;">
+
+                    <h5>Veggie Fried Rice</h5>
+                    <p>$3.50 · 1 Bowl</p>
+                    <span>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Sides -->
+                <div class="row mt-2 filter sides">
+                  <div class="row"><h3>Featured menu items</h3></div>
+
+                  <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 " style="border: 1px solid #C4C4C4;
+                  border-radius: 10px; text-align: center;">
+                    <img src="../../assets/Images/vegie-fried.png" class="img-responsive" style="width: 90%;">
+
+                    <h5>Veggie Fried Rice</h5>
+                    <p>$3.50 · 1 Bowl</p>
+                    <span>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                  <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 " style="border: 1px solid #C4C4C4;
+                  border-radius: 10px; text-align: center;">
+                    <img src="../../assets/Images/vegie-fried.png" class="img-responsive" style="width: 90%;">
+
+                    <h5>Veggie Fried Rice</h5>
+                    <p>$3.50 · 1 Bowl</p>
+                    <span>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Lunch -->
+                <div class="row mt-2 filter lunch">
+                  <div class="row">
+                    <div style="display: flex; ">
+                      <h3>Lunch</h3>
+                      <p style="margin-left: 5%; padding: 5px 10px; ">12 - 4 PM</p>
+                    </div>
+                  </div>
+
+                  <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 " style="border: 1px solid #C4C4C4;
+                  border-radius: 10px; text-align: center;">
+                    <img src="../../assets/Images/vegie-fried.png" class="img-responsive" style="width: 90%;">
+
+                    <h5>Veggie Fried Rice</h5>
+                    <p>$3.50 · 1 Bowl</p>
+                    <span>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                  <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 " style="border: 1px solid #C4C4C4;
+                  border-radius: 10px; text-align: center;">
+                    <img src="../../assets/Images/vegie-fried.png" class="img-responsive" style="width: 90%;">
+
+                    <h5>Veggie Fried Rice</h5>
+                    <p>$3.50 · 1 Bowl</p>
+                    <span>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                  <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 " style="border: 1px solid #C4C4C4;
+                  border-radius: 10px; text-align: center;">
+                    <img src="../../assets/Images/vegie-fried.png" class="img-responsive" style="width: 90%;">
+
+                    <h5>Veggie Fried Rice</h5>
+                    <p>$3.50 · 1 Bowl</p>
+                    <span>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                  <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 " style="border: 1px solid #C4C4C4;
+                  border-radius: 10px; text-align: center;">
+                    <img src="../../assets/Images/vegie-fried.png" class="img-responsive" style="width: 90%;">
+
+                    <h5>Veggie Fried Rice</h5>
+                    <p>$3.50 · 1 Bowl</p>
+                    <span>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                  <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 " style="border: 1px solid #C4C4C4;
+                  border-radius: 10px; text-align: center;">
+                    <img src="../../assets/Images/vegie-fried.png" class="img-responsive" style="width: 90%;">
+
+                    <h5>Veggie Fried Rice</h5>
+                    <p>$3.50 · 1 Bowl</p>
+                    <span>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                  <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 " style="border: 1px solid #C4C4C4;
+                  border-radius: 10px; text-align: center;">
+                    <img src="../../assets/Images/vegie-fried.png" class="img-responsive" style="width: 90%;">
+
+                    <h5>Veggie Fried Rice</h5>
+                    <p>$3.50 · 1 Bowl</p>
+                    <span>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                  <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 " style="border: 1px solid #C4C4C4;
+                  border-radius: 10px; text-align: center;">
+                    <img src="../../assets/Images/vegie-fried.png" class="img-responsive" style="width: 90%;">
+
+                    <h5>Veggie Fried Rice</h5>
+                    <p>$3.50 · 1 Bowl</p>
+                    <span>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                  <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 " style="border: 1px solid #C4C4C4;
+                  border-radius: 10px; text-align: center;">
+                    <img src="../../assets/Images/vegie-fried.png" class="img-responsive" style="width: 90%;">
+
+                    <h5>Veggie Fried Rice</h5>
+                    <p>$3.50 · 1 Bowl</p>
+                    <span>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Dinner -->
+                <div class="row mt-2 filter dinner">
+                  <div class="row">
+                    <div style="display: flex; ">
+                      <h3>Dinner</h3>
+                      <p style="margin-left: 5%; padding: 5px 10px; ">4 - 6:30 PM</p>
+                    </div>
+                  </div>
+
+                  <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 " style="border: 1px solid #C4C4C4;
+                  border-radius: 10px; text-align: center;">
+                    <img src="../../assets/Images/vegie-fried.png" class="img-responsive" style="width: 90%;">
+
+                    <h5>Veggie Fried Rice</h5>
+                    <p>$3.50 · 1 Bowl</p>
+                    <span>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                  <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 " style="border: 1px solid #C4C4C4;
+                  border-radius: 10px; text-align: center;">
+                    <img src="../../assets/Images/vegie-fried.png" class="img-responsive" style="width: 90%;">
+
+                    <h5>Veggie Fried Rice</h5>
+                    <p>$3.50 · 1 Bowl</p>
+                    <span>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                  <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 " style="border: 1px solid #C4C4C4;
+                  border-radius: 10px; text-align: center;">
+                    <img src="../../assets/Images/vegie-fried.png" class="img-responsive" style="width: 90%;">
+
+                    <h5>Veggie Fried Rice</h5>
+                    <p>$3.50 · 1 Bowl</p>
+                    <span>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                  <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 " style="border: 1px solid #C4C4C4;
+                  border-radius: 10px; text-align: center;">
+                    <img src="../../assets/Images/vegie-fried.png" class="img-responsive" style="width: 90%;">
+
+                    <h5>Veggie Fried Rice</h5>
+                    <p>$3.50 · 1 Bowl</p>
+                    <span>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                  <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 " style="border: 1px solid #C4C4C4;
+                  border-radius: 10px; text-align: center;">
+                    <img src="../../assets/Images/vegie-fried.png" class="img-responsive" style="width: 90%;">
+
+                    <h5>Veggie Fried Rice</h5>
+                    <p>$3.50 · 1 Bowl</p>
+                    <span>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                  <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 " style="border: 1px solid #C4C4C4;
+                  border-radius: 10px; text-align: center;">
+                    <img src="../../assets/Images/vegie-fried.png" class="img-responsive" style="width: 90%;">
+
+                    <h5>Veggie Fried Rice</h5>
+                    <p>$3.50 · 1 Bowl</p>
+                    <span>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                </div>      
+        
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 pt-3" style="background: #FCFCFC; border-radius: 20px; text-align: center;">
+      <h2>Your Order Summary</h2>
+      <h5>From Rose’s Caribbean</h5>
+    </div>
+
+
+
+      <!-- Popup -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-10" style="display: flex;align-items: center;">
+                  <i class="fa fa-heart-o" aria-hidden="true" style="font-size: 25px;"></i> &nbsp;
+                  <h2>Veggie Fried Rice</h2>
+                </div>
+                <div class="col-md-2">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12" style="padding: 0px 20px;">
+                  <p>240 cal</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12" style="text-align: center;">
+                  <img src="../../assets/Images/vegie-fried.png" alt="">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  Item Description Item Description Item Description Item Description Item Description Item Description Item Description
+                </div>
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-md-6">
+                  <h2>Spice level</h2>
+                  <span style="color: #979797;">Select 1</span> <br> <br>
+
+                  <input type="radio" name="res" id=""> Mild <br>
+                  <input type="radio" name="res" id=""> Medium <br>
+                  <input type="radio" name="res" id=""> Hot
+                </div>
+                <div class="col-md-6 pt-2" style="text-align: right; padding-right: 40px;">
+                  <h6 style="color: #ED1C24;">Required</h6>
+                </div>
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-md-6">
+                  <h2>Sides</h2>
+                  <span style="color: #979797;">Select up to 3</span> <br> <br>
+
+                  <input type="checkbox" name="res1" id=""> White Rice <br>
+                  <input type="checkbox" name="res1" id=""> Veggie fried rice <br>
+                  <input type="checkbox" name="res1" id=""> Fries <br>
+                  <input type="checkbox" name="res1" id=""> Side dish 4
+
+                </div>
+                <div class="col-md-6 pt-2" style="text-align: right; padding-right: 40px;">
+                  <h6 style="color: #ED1C24;">Required</h6>
+                </div>
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-md-8">
+                  <h2>Special Instructions</h2> <br>
+
+                  <textarea name="inst" placeholder="Add special instructions for the preparation of this item" id="inst" cols="30" rows="5" style="background: #F5F6F8; border-radius: 10px;"></textarea>
+                </div>
+                <div class="col-md-4 pt-2" style="text-align: right; padding-right: 40px;">
+                  <h6 style="color:#979797;">Optional</h6>
+                </div>
+              </div>
+  
+              <div class="row mt-3">
+                <div class="col-md-6" style="text-align: center; font-size:30px">
+                  <button style="border: 1px solid #000000;border-radius: 45px; width: 50px">-</button> <span style="color: #FFCE00"> 1 </span><button style="border: 1px solid #000000;border-radius: 45px; width: 50px;">+</button>
+                </div>
+                
+                <div class="col-md-6" style="text-align: center;">
+                  <button style="background: #FFCC00;border-radius: 15px; color:#FFF; font-size: 30px;">Add - $8.50</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+<!-- Footer -->
+<app-footer></app-footer>

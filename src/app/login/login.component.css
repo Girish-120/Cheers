@@ -12,7 +12,15 @@
     color: #F5AD11;
 }
 
-input {
+.passInput {
+    position: absolute;
+    width: 648px;
+    height: 53px;
+    left: 423px;
+    top: 324px;
+    border-radius: 8px;
+}
+.emailInput {
     position: absolute;
     width: 648px;
     height: 53px;

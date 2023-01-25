@@ -1,4 +1,4 @@
-$(document).ready(function () {
+function multiSlider () {
     var itemsMainDiv = ('.MultiCarousel');
     var itemsDiv = ('.MultiCarousel-inner');
     var itemWidth = "";
@@ -103,4 +103,4 @@ $(document).ready(function () {
         ResCarousel(ell, Parent, slide);
     }
 
-});
+};

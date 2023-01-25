@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AppserviceService } from '../appservice.service';
 import { FormBuilder ,Validators } from '@angular/forms';
 import { ToastrService } from "ngx-toastr";
+import { formatDate } from '@angular/common'; 
 
 declare var $:any;
 @Component({
@@ -22,8 +23,7 @@ export class SignUpComponent implements OnInit {
     $("#information").hide();
     $("#emailVerify").hide();
     $("#finishedSignUp").hide();
-    $("#ageVerification").show();
-    $("#signUp").hide();
+    $("#ageVerification").hide();
   }
 
   signUpForm = this.fb.group({
@@ -32,6 +32,8 @@ export class SignUpComponent implements OnInit {
   })
 
   signUpSubmit(){
+    console.log(this.signUpForm.value);
+    
     this.service.post("/registerUser",this.signUpForm.value).subscribe((data:any)=>{
       if(data.success == true){
         this.toastr.success(data.message, 'Success')
@@ -53,6 +55,8 @@ export class SignUpComponent implements OnInit {
   })
 
   otpFormSubmit(){
+    console.log(this.otpForm.value);
+    
     this.service.post("/verifyMobile",this.otpForm.value).subscribe((data:any)=>{
       if(data.success == true){
         console.warn(data);
@@ -81,6 +85,7 @@ export class SignUpComponent implements OnInit {
         console.warn(data);
         $("#information").hide();
         $("#emailVerify").show();
+        $("#pass1").focus();
         this.emailOtpForm.patchValue({"email":this.informationForm.value.email});
         this.emailOtpForm.patchValue({"otp":data.data.otp});
 
@@ -107,14 +112,20 @@ export class SignUpComponent implements OnInit {
 
   ageVerifyForm = this.fb.group({
     email:["",Validators.required],
-    dob:["",Validators.required]
+    dob:[""],
+    
   })
 
   ageVerifySubmit(){
-    console.log(this.ageVerifyForm.value);
+    this.ageVerifyForm.controls.dob.setValue(formatDate(this.ageVerifyForm.value.dob,'dd-MM-yyyy','en'));
     
     this.service.post("/verifyAge",this.ageVerifyForm.value).subscribe((data:any)=>{
       console.log(data);
+      if(data.success == true){
+        $("#ageVerification").hide();
+        $("#finishedSignUp").show();
+        this.toastr.success(data.message, 'Success')
+      }
       
     })
   }
