@@ -42,13 +42,15 @@ export class LoginComponent implements OnInit {
   })
 
   loginFormSubmit(){
-    console.warn(this.loginForm.value);
+    this.service.waitLoader = true;
     this.service.post("/login",this.loginForm.value).subscribe((data:any)=>{
       if(data.success == true){
         this.toaster.success(data.message,'success')
         console.warn(data);
         this.router.navigateByUrl("/main");
-        sessionStorage.setItem('token', data.data.token)
+        sessionStorage.setItem('token', data.data.token);
+
+        this.service.waitLoader = false;
       }
     })
   }
@@ -61,6 +63,7 @@ export class LoginComponent implements OnInit {
   })
 
   emailForgotSubmit(){
+    this.service.waitLoader = true;
     this.service.post("/forgotPassword",this.emailForgotForm.value).subscribe((data:any)=>{
       if(data.success == true){
         this.toaster.success(data.message,'success');
@@ -69,6 +72,8 @@ export class LoginComponent implements OnInit {
 
         $("#OtpFor").show();
         $("#emailFor").hide();
+
+        this.service.waitLoader = false;
       }
     })
   }
@@ -79,6 +84,7 @@ export class LoginComponent implements OnInit {
   })
 
   otpMatchSubmit(){
+    this.service.waitLoader = true;
     this.service.post("/matchCode",this.otpMatchForm.value).subscribe((data:any)=>{
       if(data.success == true){
         this.toaster.success(data.message,'success');
@@ -86,6 +92,7 @@ export class LoginComponent implements OnInit {
 
         $("#OtpFor").hide();
         $("#newPassFor").show();
+        this.service.waitLoader = false;
       }
     })
   }
@@ -96,10 +103,12 @@ export class LoginComponent implements OnInit {
   })
 
   resetPassSumbit(){
+    this.service.waitLoader = true;
     this.service.post("/resetPassword",this.resetPassForm.value).subscribe((data:any)=>{
       if(data.success == true){
         this.toaster.success(data.message,'success');
         $('.modal').modal('toggle');
+        this.service.waitLoader = false;
       }
     });
   }

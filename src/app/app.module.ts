@@ -23,6 +23,8 @@ import { OrderHistoryComponent } from './order-history/order-history.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { Page404Component } from './page404/page404.component';
 
+import { NgxUiLoaderModule, NgxUiLoaderHttpModule } from 'ngx-ui-loader';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +50,11 @@ import { Page404Component } from './page404/page404.component';
     HttpClientModule,
     ReactiveFormsModule,
     ToastrModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgxUiLoaderModule,
+    NgxUiLoaderHttpModule.forRoot({
+      showForeground: true,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

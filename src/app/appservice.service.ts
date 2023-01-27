@@ -8,6 +8,9 @@ import { environment } from 'src/environments/environment';
 })
 export class AppserviceService {
 
+  waitLoader: boolean = false;
+  loaderStatus:boolean = true
+
   constructor(private http: HttpClient) { }
   
   httpOptions = {headers: new HttpHeaders().set('Authorization', 'Bearer ' + sessionStorage.getItem("token"))};

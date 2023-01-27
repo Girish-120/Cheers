@@ -22,6 +22,9 @@ export class AccountComponent implements OnInit {
   constructor(private service:AppserviceService ,private toaster:ToastrService, private fb:FormBuilder) { }
 
   ngOnInit() {
+
+    this.service.waitLoader = true;
+
     this.getProfileDet();
     this.getAllAddress();
 
@@ -38,6 +41,7 @@ export class AccountComponent implements OnInit {
          if (this.getProfile.enableNotification == true) {
            this.isChecked = true;
          }
+         this.service.waitLoader = false;
        }
      });
   }
@@ -46,6 +50,7 @@ export class AccountComponent implements OnInit {
     this.service.getApi("getAllAddress").subscribe((data:any)=>{
       if(data.success == true){
        this.getAddress = data.data;
+       this.service.waitLoader = true;
       }
     });
   }
@@ -58,12 +63,13 @@ export class AccountComponent implements OnInit {
   })
 
   updateSubmit(){
+    this.service.waitLoader = true;
     this.service.post("/updateProfile/", this.updateDetailsForm.value).subscribe((data:any)=>{
       if(data.success == true){
         this.toaster.success(data.message,'success');
         this.getProfileDet();
+        this.service.waitLoader = false;
       }
-      
     })
   }
 
@@ -75,10 +81,12 @@ export class AccountComponent implements OnInit {
   })
 
   changePassSubmit(){
+    this.service.waitLoader = true;
     this.service.post("/changePassword", this.changePassForm.value).subscribe((data:any)=>{
       if(data.success == true){
         this.toaster.success(data.message,'success');
         this.getProfileDet();
+        this.service.waitLoader = false;
       }
       
     })
@@ -93,12 +101,14 @@ export class AccountComponent implements OnInit {
   })
 
   newAddressSubmit(){
+    this.service.waitLoader = true;
     this.service.post("/insertAddress", this.newAddressFrom.value).subscribe((data:any)=>{
       if(data.success == true){
         this.toaster.success(data.message,'success');
         this.getAllAddress();
         this.newAddressFrom.reset();
         $('.modal').modal('hide');
+        this.service.waitLoader = false;
       }
       
     })
@@ -122,7 +132,7 @@ export class AccountComponent implements OnInit {
   })
 
   UpdateAddressSubmit(){
-    console.log(this.UpdateAddressFrom.value);
+    this.service.waitLoader = true;
     
     this.service.put("/updateAddress", this.UpdateAddressFrom.value).subscribe((data:any)=>{
       if(data.success == true){
@@ -130,16 +140,19 @@ export class AccountComponent implements OnInit {
         this.getAllAddress();
         this.UpdateAddressFrom.reset();
         $('.modal').modal('hide');
+        this.service.waitLoader = false;
       }
     })
   }
 
   // Delete Address 
   deleteAdd(d:any){
+    this.service.waitLoader = true;
     this.service.delete("/deleteAddress",d).subscribe((data:any)=>{
       if(data.success == true){
         this.toaster.success(data.message,'success');
         this.getAllAddress();
+        this.service.waitLoader = false;
       }
     })
   }

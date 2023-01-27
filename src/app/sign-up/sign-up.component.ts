@@ -32,8 +32,7 @@ export class SignUpComponent implements OnInit {
   })
 
   signUpSubmit(){
-    console.log(this.signUpForm.value);
-    
+    this.service.waitLoader = true;
     this.service.post("/registerUser",this.signUpForm.value).subscribe((data:any)=>{
       if(data.success == true){
         this.toastr.success(data.message, 'Success')
@@ -43,7 +42,9 @@ export class SignUpComponent implements OnInit {
         $("#pass1").focus();
         this.otpValue = data.data.otp;
         this.otpForm.controls.otp.setValue(this.otpValue);
-        this.otpForm.patchValue({"contactNo":this.signUpForm.value.contactNo})
+        this.otpForm.patchValue({"contactNo":this.signUpForm.value.contactNo});
+
+        this.service.waitLoader = false;
       }
     })
   }
@@ -55,8 +56,7 @@ export class SignUpComponent implements OnInit {
   })
 
   otpFormSubmit(){
-    console.log(this.otpForm.value);
-    
+    this.service.waitLoader = true;
     this.service.post("/verifyMobile",this.otpForm.value).subscribe((data:any)=>{
       if(data.success == true){
         console.warn(data);
@@ -66,6 +66,8 @@ export class SignUpComponent implements OnInit {
         $("#information").show();
         this.custId = data.data.customerId;
         this.informationForm.controls.customerId.setValue(this.custId);
+
+        this.service.waitLoader = false;
       }
     })
   }
@@ -79,6 +81,7 @@ export class SignUpComponent implements OnInit {
   })
 
   informationSubmit(){
+    this.service.waitLoader = true;
     this.service.post("/registerEmail",this.informationForm.value).subscribe((data:any)=>{
       if(data.success == true){
         this.toastr.success(data.message, 'Success')
@@ -88,8 +91,9 @@ export class SignUpComponent implements OnInit {
         $("#pass1").focus();
         this.emailOtpForm.patchValue({"email":this.informationForm.value.email});
         this.emailOtpForm.patchValue({"otp":data.data.otp});
-
         this.ageVerifyForm.patchValue({"email":this.informationForm.value.email});
+
+        this.service.waitLoader = false;
       }
     })
   }
@@ -100,12 +104,14 @@ export class SignUpComponent implements OnInit {
   })
 
   emailOtpSubmit(){
+    this.service.waitLoader = true;
     this.service.post("/verifyEmail",this.emailOtpForm.value).subscribe((data:any)=>{
       if(data.success == true){
         console.warn(data);
         $("#emailVerify").hide();
         $("#ageVerification").show();
-        this.toastr.success(data.message, 'Success')
+        this.toastr.success(data.message, 'Success');
+        this.service.waitLoader = false;
       }
     })
   }
@@ -117,14 +123,16 @@ export class SignUpComponent implements OnInit {
   })
 
   ageVerifySubmit(){
+    this.service.waitLoader = false;
+
     this.ageVerifyForm.controls.dob.setValue(formatDate(this.ageVerifyForm.value.dob,'dd-MM-yyyy','en'));
-    
     this.service.post("/verifyAge",this.ageVerifyForm.value).subscribe((data:any)=>{
       console.log(data);
       if(data.success == true){
         $("#ageVerification").hide();
         $("#finishedSignUp").show();
-        this.toastr.success(data.message, 'Success')
+        this.toastr.success(data.message, 'Success');
+        this.service.waitLoader = false;
       }
       
     })

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-page404',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Page404Component implements OnInit {
 
-  constructor() { }
+  constructor(private route:Router) { }
 
   ngOnInit() {
+   
+  }
+
+  notFound(){
+    if(sessionStorage.getItem("token")){
+      this.route.navigate(['/main']);
+    }
+    else{
+      this.route.navigate(['/']);
+    }
   }
 
 }

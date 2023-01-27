@@ -47,8 +47,12 @@
           <li class="nav-item" style="display: flex;justify-content: center;align-items: center; margin-right: 65px;">
             <i id="listClose" class="fa fa-times" aria-hidden="true" style="font-size: 23px; cursor: pointer;"></i>
           </li>
-          <li class="nav-item" style="background: #FFCE00;border-radius: 20px; padding-top: 7px; cursor: pointer;">
-            <a class="nav-link" data-toggle="popover"  data-placement="bottom" data-content="" ><i style="color: #FFF;" class="fa fa-shopping-cart" aria-hidden="true"></i> <span style="padding-left: 23px;color: #FFF;">0</span></a>
+          <li class="nav-item" style="background: #FFCE00;border-radius: 20px; padding-top: 7px; cursor: pointer;" routerLink="/checkout" >
+            <!-- <a class="nav-link" data-toggle="popover"  data-placement="bottom"  > -->
+            <a class="nav-link"  >
+              <i style="color: #FFF;" class="fa fa-shopping-cart" aria-hidden="true"></i>
+              <span style="padding-left: 23px;color: #FFF;">0</span>
+            </a>
           </li>
           <li class="nav-item">
             <a class="nav-link login_button" routerLink="/accounts"><i class="fa fa-user" aria-hidden="true"></i></a>
@@ -161,5 +165,5 @@
        </div>
      </div>
  
-     <div class="mt-3"><a class="checkOutBtn">Proceed to Check-out</a></div>
+     <div class="mt-3"><a class="checkOutBtn" >Proceed to Check-out</a></div>
  </div>
